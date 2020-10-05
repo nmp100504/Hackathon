@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exams</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/fontawesome/css/all.css">
+</head>
+<body>
+    <div id="navBar">
+        <div class="navbar-home">Home</div>
+        <div class="navbar-about-us">About Us</div>
+    </div>
+
+    <div id="teacher-page-container" >
+        <div class="sideBar" >
+            <div class="side-bar-component">Classes</div>
+        </div>
+
+        <div class="main" >
+            <div class="btn-add-answer">
+                <button class="fas fa-plus"></button>
+                <span>Add Question</span>
+            </div>
+            
+            <div class="exam-box" >
+                <div class="btn-answer-box">
+                    <button class="btn-add-question, fas fa-plus"> Add answer</button>
+                    <button class="btn-save-question, fas fa-check">Submit answer</button>
+                </div>
+                
+                <div class ="answer-container">
+                    <div>
+                        <input class ="question-input" type="text" name="question" placeholder="Question:">
+                    </div>    
+                    <div class="answer-box">
+                        <div class="answer-choice">
+                            <input class="answer-input" type="text" placeholder="Answer: ">
+                            <button class="btn-remove-answer, fas fa-trash-alt"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn-submit-exam">Submit exam</button>
+        </div>
+    </div>
+    <div class="footer"></div>
+</body>
+</html>

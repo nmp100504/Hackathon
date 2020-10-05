@@ -1,0 +1,387 @@
+body, html {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: column;
+  }
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+
+#page-body{
+    /* background-image: url("https://www.gannett-cdn.com/presto/2018/12/11/POEN/1bf8529c-5855-4948-b1c9-609b51043aa6-GettyImages-950607874.jpg?crop=6143,3426,x0,y0&width=3200&height=1785&format=pjpg&auto=webp"); */
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;  
+    position: relative;
+    opacity: 0.5;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #20639b   ;
+    min-height: 695px;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: blue;
+}
+
+.formButton{
+    height: 5%;
+    width: 40%;
+    background: #00ad5f;
+    color: whitesmoke;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+}
+.formButton:hover{
+    background-color: black;
+}
+
+#container{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    width: 300px;
+    margin-top: 50px;
+    height: 100%;
+}
+
+#navBar{
+    background-color: #726a95;
+    color: whitesmoke;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    font-size: 25px;
+    flex: 0 1 40px;
+}
+
+
+#teacher-page-container{
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+    background-color: red;
+    flex: 1 1 auto;
+}
+
+.footer{
+    height: 100px;
+    background-color: #00ad5f;
+    flex-shrink: 0 0 40px;
+}
+
+.sideBar{
+    width: 15%;
+    height: fit-parent;
+    background-color: #709fb0;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    /* flex-grow: 1; */
+}
+
+.main{
+    width: 85%;
+    height: 100%;
+    background-color:#f4ebc1;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    min-height: 695px;
+}
+
+#home-signin{
+    width: 100px;
+    height: 50px;
+    color: white;
+    background-color: green;
+    border-radius: 8px;
+}
+#home-signup{
+    width: 100px;
+    height: 50px;
+    color: white;
+    background-color: green;
+    border-radius: 8px;
+}
+
+.Welcome{
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+}
+
+
+#sign-up-container{
+    display: flex;
+    flex-flow: column;
+    width: 300px;
+    margin-top: 50px;
+    background-color: #3caea3;
+    height: 350px;
+    border-radius: 5px;
+
+}
+
+.field{
+    display: flex;
+    flex-flow: column;
+    margin: 5px;
+    width: 70%;
+    margin-left: 50px;
+}
+
+
+.signup-label {
+    color: white(0, 0, 0);
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+    margin: 5px;
+    width: 100%;
+}
+
+#signup{
+    width: 50%;
+    margin: auto;
+    color: white;
+    background-color: green;
+    border-radius: 8px;
+    height: 50px;
+}
+
+.select-role{
+    width: 100%;
+}
+
+.side-bar-component{
+    margin-top: 25px;
+    font-size: 30px;
+}
+
+
+
+.create-exam-main{
+    background-color: #f4ebc1;
+    height: 100%;
+    width: 85%;
+    position: relative;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    flex-grow: 1;
+}
+
+
+.class-info , .assignment{
+    background-color: white;
+    height: 95px;
+    border-radius: 5px;
+    width: 70%;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    border: 2px black solid;
+    padding: 10px;
+}
+
+hr{
+    /* border: none; */
+    border: 1px black solid;
+    width: 500px;
+    margin-bottom: 20px;
+}
+
+.class-name , .assignment-name, .student-name{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.manage-student-name, .manage-assignment-name {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.student-info {
+    background-color: white;
+    height: 95px;
+    border-radius: 5px;
+    width: 70%;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    border: 2px black solid;
+    padding: 10px;
+}
+
+
+.manage-student-info {
+    background-color: white;
+    height: 500px;
+    border-radius: 5px;
+    width: 70%;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    border: 2px black solid;
+    padding: 10px;
+    padding-bottom: 25px;
+}
+
+.manage-assignment-info, .exam-box{
+    background-color: white;
+    height: 500px;
+    border-radius: 5px;
+    width: 70%;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    border: 2px black solid;
+    padding: 10px;
+    padding-bottom: 25px;
+    overflow: scroll;
+}
+.exam-box{
+    display: flex;
+    flex-flow: row;
+    /* justify-content: center;
+    align-items: center; */
+}
+.student-name{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.subject , .assignment-status{
+    margin-right: 150px;
+    font-size: 20px;
+}
+
+
+.number-of-students , .number, .submit{
+    font-size: 20px;
+}
+
+.assignment{
+    margin-left: 100px;
+}
+
+.teacher{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.hw-status{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+
+.navbar-home{
+    margin-top: 15px;
+}
+
+.navbar-about-us{
+    margin-top: 15px;
+}
+
+.btn-container{
+    margin-top: 10px;
+    display: flex;
+    flex-flow: wrap;
+}
+
+
+
+.pagination {
+    display: inline-block;
+  }
+  
+  .pagination div {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+    margin: 0 4px;
+  }
+  
+  .pagination div.active {
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+  }
+  
+  .pagination div:hover:not(.active) {background-color: #ddd;}
+
+.checkbox-container{
+    margin-left: 15px;
+    margin-top: 8px;
+}
+
+
+.question{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.submit-assignment{
+    text-align: end;
+}
+
+.question-input{
+    width: 300px;
+    height: 20px;
+    margin-bottom: 15px;
+}
+
+.answer-input{
+    width: 300px;
+    height: 20px; 
+    /* margin-right: 10px;
+    margin-top: 10px;
+    margin-left: 10px; */
+}
+
+.answer-box{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    
+}
+
+.answer-container{
+    display: flex;
+    flex-flow: column;
+    margin-top: 10px;
+    margin-left: 50px;
+}
+
+
+.btn-add-answer{
+    margin-top: 15px;
+}
+
+.button-container{
+    margin-top: 15px;
+}
