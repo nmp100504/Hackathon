@@ -6,6 +6,9 @@
     <title>Exams</title>
     <link rel="stylesheet" href="../index.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-firestore.js"></script>
     <link rel="stylesheet" href="/fontawesome/css/all.css">
 </head>
 <body>
@@ -20,32 +23,26 @@
         </div>
 
         <div class="main" >
-            <div class="btn-add-answer">
+            <div id="btn-add-question" class="btn-add-answer">
                 <button class="fas fa-plus"></button>
                 <span>Add Question</span>
             </div>
             
-            <div class="exam-box" >
-                <div class="btn-answer-box">
-                    <button class="btn-add-question, fas fa-plus"> Add answer</button>
-                    <button class="btn-save-question, fas fa-check">Submit answer</button>
-                </div>
+            <div id="exam-box" class="exam-box" >
+
                 
                 <div class ="answer-container">
-                    <div>
-                        <input class ="question-input" type="text" name="question" placeholder="Question:">
-                    </div>    
-                    <div class="answer-box">
-                        <div class="answer-choice">
-                            <input class="answer-input" type="text" placeholder="Answer: ">
-                            <button class="btn-remove-answer, fas fa-trash-alt"></button>
-                        </div>
-                    </div>
+
+                    <p id="question-root"></p>
+                    <p id="answer-root"></p>
                 </div>
+                
             </div>
-            <button class="btn-submit-exam">Submit exam</button>
+            
+            <button id="btn-submit-exam" class="btn-submit-exam, fas fa-check">Submit exam</button>
         </div>
     </div>
     <div class="footer"></div>
 </body>
+<script src="exam.js"></script>
 </html>

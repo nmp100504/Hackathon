@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign up </title>
-    <link rel="stylesheet" href="index.css">
+    <title>Create your class</title>
+    <link rel="stylesheet" href="../index.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-auth.js"></script>
@@ -17,41 +17,35 @@
 </head>
 <body>
     <div id="page-body">
-        <div class="Welcome">Sign Up</div>
-        <form id="sign-up-form">
+        <div class="Welcome">Create your class here</div>
+        <form id="create-class-form">
             <div class="field">
-                <label class="signup-label" for="email">Email: </label>
-                <input type="text" id="email" placeholder="Enter your email">
+                <label class="signup-label" for="class-name">Class's name: </label>
+                <input type="text" id="class-name" placeholder="Enter your class's name: ">
             </div>
 
             <div class="field">
-                <label class="signup-label" for="password">Password: </label>
-                <input type="text" id="password" placeholder="Enter your password">
+                <label class="signup-label" for="subject-name">Subject: </label>
+                <input type="text" id="subject-name" placeholder="Enter your subject: ">
             </div>
 
             <div class="field">
-                <label class="signup-label"  for="confirmPassword">Confirm password: </label>
-                <input type="text" id="confirmPassword" placeholder="Confirm your password">
+                <label class="signup-label"  for="class-password">Your class's password: </label>
+                <span type="text" id="class-password"></span>
             </div>
             
-            <div class="field">
-                <label class="signup-label"  for="teacher-name">Your name: </label>
-                <input type="text" id="teacher-name" placeholder="Your name: ">
-            </div>
-            
-
-            <div class="field" >
+            <!-- <div class="field" >
                 <label class="signup-label"  for="role">You are: </label>
                 <select name="role" id="role" class="select-role">
                     <option value="teacher">Teacher</option>
                     <option value="student">Student</option>
                 </select>
                 
-            </div>
-            
-            <button id="signup" >SIGN UP</button>
+            </div> -->
+            <button id="signup" >Create</button>
+            <button id="home">Home</button>
         </form>
     </div>
 </body>
-<script src="signUp.js"></script>
+<script src="createClass.js"></script>
 </html>

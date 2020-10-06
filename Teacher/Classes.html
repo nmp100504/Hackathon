@@ -6,6 +6,9 @@
     <title>Classes</title>
     <link rel="stylesheet" href="../index.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-firestore.js"></script>
 </head>
 <body>
     <div id="navBar">
@@ -19,42 +22,10 @@
         </div>
 
         <div class="main">
-            <div class="btn-container">
-                <button class="btn-create-class">Create class</button>
+            <div id="class-container" class="btn-container">
+                <button id="btn-create-class" class="btn-create-class">Create class</button>
             </div>
-            <div class="class-info">
-                <div class="class-name">A7</div>
-                <div class="teacher">Giáo viên phụ trách:</div>
-                <div>
-                    <span class="subject">Môn:    </span>
-                    <span class="number-of-students">Sĩ số:</span>
-                </div>
-            </div>
-            <!-- <div class="class-info">
-                <div class="class-name">A7</div>
-                <div class="teacher">Giáo viên phụ trách:</div>
-                <div>
-                    <span class="subject">Môn:    </span>
-                    <span class="number-of-students">Sĩ số:</span>
-                </div>
-            </div>
-            <div class="class-info">
-                <div class="class-name">A7</div>
-                <div class="teacher">Giáo viên phụ trách:</div>
-                <div>
-                    <span class="subject">Môn:    </span>
-                    <span class="number-of-students">Sĩ số:</span>
-                </div>
-            </div> -->
-           
-            <div class="class-info">
-                <div class="class-name">A7</div>
-                <div class="teacher">Giáo viên phụ trách:</div>
-                <div>
-                    <span class="subject">Môn:    </span>
-                    <span class="number-of-students">Sĩ số:</span>
-                </div>
-            </div>
+            <!-- <div id="class-container"></div> -->
 
             <div class="pagination">
                 <div>&laquo;</div>
@@ -68,4 +39,5 @@
 
     <footer class="footer"></footer>
 </body>
+<script src="classes.js"></script>
 </html>
