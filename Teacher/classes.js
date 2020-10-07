@@ -35,7 +35,7 @@ let data
                       let classHTML =`
                       <div class="class-info">
                         <div class="class-name">${class_name}</div>
-                        <div class="teacher">Giáo viên phụ trách: ${teacher_name}</div>
+                        <div class="teacher">Teacher: ${teacher_name}</div>
                         <div>
                           <span class="subject">Môn: ${subject_name}</span>
                           <span id="class_id" class="number-of-students">Class's ID: ${class_id}</span>

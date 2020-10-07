@@ -6,6 +6,9 @@
     <title>Manage assignments</title>
     <link rel="stylesheet" href="../index.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-firestore.js"></script>
     <link rel="stylesheet" href="/fontawesome/css/all.css">
 </head>
 <body>
@@ -23,7 +26,8 @@
 
         <div class="main">
             <div class="manage-assignment-info">
-                <div class="manage-assignment-name">Bài tập 1</div>
+                <div class="manage-assignment-name">Assignment 1</div>
+                <span id="score">Score:7/10</span>
                 <hr>
                 <div class="question">
                     <h3>Question 1:</h3>
@@ -34,19 +38,189 @@
                       
                       <div class="checkbox-container">
                         <input type="checkbox">
+                        <span class="checkmark">Answer 2</span>
+                    </div>
+                      
+                    <div class="checkbox-container">
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark">Answer 3</span>
+                    </div>
+                    <div class="checkbox-container">
+                        <input type="checkbox" >
+                        <span class="checkmark">Answer 4</span>
+                    </div>
+                    <h3>Question 2:</h3>
+                    <div class="checkbox-container">
+                        <input type="checkbox" >
                         <span class="checkmark">Answer 1</span>
+                    </div>
+                      
+                      <div class="checkbox-container">
+                        <input type="checkbox">
+                        <span class="checkmark">Answer 2</span>
+                    </div>
+                      
+                    <div class="checkbox-container">
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark" >Answer 3</span>
+                    </div>
+                    <div class="checkbox-container">
+                        <input type="checkbox" >
+                        <span class="checkmark">Answer 4</span>
+                    </div>
+                    <h3>Question 3:</h3>
+                    <div class="checkbox-container">
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark">Answer 1</span>
+                    </div>
+                      
+                      <div class="checkbox-container">
+                        <input type="checkbox">
+                        <span class="checkmark">Answer 2</span>
                     </div>
                       
                     <div class="checkbox-container">
                         <input type="checkbox" >
-                        <span class="checkmark">Answer 1</span>
+                        <span class="checkmark">Answer 3</span>
                     </div>
+                    <div class="checkbox-container">
+                        <input type="checkbox" >
+                        <span class="checkmark">Answer 4</span>
+                    </div>
+                    <h3>Question 4:</h3>
+                    <div class="checkbox-container">
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark" >Answer 1</span>
+                    </div>
+                      
+                      <div class="checkbox-container">
+                        <input type="checkbox">
+                        <span class="checkmark">Answer 2</span>
+                    </div>
+                      
+                    <div class="checkbox-container">
+                        <input type="checkbox" >
+                        <span class="checkmark" >Answer 3</span>
+                    </div>
+                    <div class="checkbox-container">
+                        <input type="checkbox" >
+                        <span class="checkmark">Answer 4</span>
+                    </div>
+                    <h3>Question 5:</h3>
                     <div class="checkbox-container">
                         <input type="checkbox" >
                         <span class="checkmark">Answer 1</span>
                     </div>
+                      
+                      <div class="checkbox-container">
+                        <input type="checkbox">
+                        <span class="checkmark">Answer 2</span>
+                    </div>
+                      
+                    <div class="checkbox-container">
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark">Answer 3</span>
+                    </div>
+                    <div class="checkbox-container">
+                        <input type="checkbox" >
+                        <span class="checkmark">Answer 4</span>
+                    </div>
+                    <h3>Question 6:</h3>
+                    <div class="checkbox-container">
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark">Answer 1</span>
+                    </div>
+                      
+                      <div class="checkbox-container">
+                        <input type="checkbox">
+                        <span class="checkmark" checked="checked">Answer 2</span>
+                    </div>
+                      
+                    <div class="checkbox-container">
+                        <input type="checkbox" >
+                        <span class="checkmark">Answer 3</span>
+                    </div>
+                    <div class="checkbox-container">
+                        <input type="checkbox" >
+                        <span class="checkmark">Answer 4</span>
+                    </div>
+                    <h3>Question 7:</h3>
+                    <div class="checkbox-container">
+                        <input type="checkbox" >
+                        <span class="checkmark">Answer 1</span>
+                    </div>
+                      
+                      <div class="checkbox-container">
+                        <input type="checkbox">
+                        <span class="checkmark">Answer 2</span>
+                    </div>
+                      
+                    <div class="checkbox-container">
+                        <input type="checkbox" >
+                        <span class="checkmark">Answer 3</span>
+                    </div>
+                    <div class="checkbox-container">
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark">Answer 4</span>
+                    </div>
+                    <h3>Question 8:</h3>
+                    <div class="checkbox-container">
+                        <input type="checkbox" >
+                        <span class="checkmark">Answer 1</span>
+                    </div>
+                      
+                      <div class="checkbox-container">
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark">Answer 2</span>
+                    </div>
+                      
+                    <div class="checkbox-container">
+                        <input type="checkbox" >
+                        <span class="checkmark">Answer 3</span>
+                    </div>
+                    <div class="checkbox-container">
+                        <input type="checkbox" >
+                        <span class="checkmark">Answer 4</span>
+                    </div>
+                    <h3>Question 9:</h3>
+                    <div class="checkbox-container">
+                        <input type="checkbox" >
+                        <span class="checkmark">Answer 1</span>
+                    </div>
+                      
+                      <div class="checkbox-container">
+                        <input type="checkbox">
+                        <span class="checkmark">Answer 2</span>
+                    </div>
+                      
+                    <div class="checkbox-container" >
+                        <input type="checkbox" checked="checked" >
+                        <span class="checkmark">Answer 3</span>
+                    </div>
+                    <div class="checkbox-container">
+                        <input type="checkbox" >
+                        <span class="checkmark">Answer 4</span>
+                    </div>
+                    <h3>Question 10:</h3>
+                    <div class="checkbox-container">
+                        <input type="checkbox">
+                        <span class="checkmark">Answer 1</span>
+                    </div>
+                      
+                      <div class="checkbox-container">
+                        <input type="checkbox">
+                        <span class="checkmark">Answer 2</span>
+                    </div>
+                      
+                    <div class="checkbox-container">
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark">Answer 3</span>
+                    </div>
+                    <div class="checkbox-container">
+                        <input type="checkbox" >
+                        <span class="checkmark">Answer 4</span>
+                    </div>
 
-                <!-- <button class="submit-assignment">Submit</button> -->
                 </div>
             </div>
         </div>
@@ -55,4 +229,5 @@
         <div>Copyright <i class="fas fa-copyright"></i> 2020 nmpX. All Rights Reserved</div>
     </footer>
 </body>
+<script src="manageAssignment.js"></script>
 </html>

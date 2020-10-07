@@ -1,6 +1,4 @@
 
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
   var firebaseConfig = {
     apiKey: "AIzaSyCZCatQDXAdHCU3dlz3RKGDITpgSR3DJ34",
     authDomain: "e-assignment-7be46.firebaseapp.com",
@@ -11,7 +9,6 @@
     appId: "1:801562777807:web:6aad891c7036789bcebfba",
     measurementId: "G-1DR884VXVW"
   };
-  // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 
 
@@ -38,16 +35,12 @@ let data
                           let studentHTML =`
                           <div class="student-info">
                             <div class="student-name">${student_name}</div>
-                            <div class="hw-status">Tình trạng bài tập về nhà <button type="submit" id="btn-assignment-status" class="fas fa-eye"></button></div>
+                            <div class="hw-status">Assignment's status <button type="submit" id="btn-assignment-status" class="fas fa-eye"></button></div>
                           
                           </div>
                           `
                           content.insertAdjacentHTML("beforeend", studentHTML)
                           document.getElementById("btn-assignment-status").addEventListener("click", (e)=>{
-                            // let a = e.target.parentNode.children.class_id.innerHTML
-                            // let lastSix = a.substr(a.length - 6); // => "Tabs1"
-                            // localStorage.setItem("chosen_class_id", lastSix)
-                            // window.location.href = "students.html"
                             let b = e.target.parentNode.parentNode.children[0].innerHTML ;
                             localStorage.setItem("chosen_student_id", b)
                             window.location.href ="studentAssignments.html"
@@ -60,7 +53,6 @@ let data
             });
         }
     })
-
 
 document.getElementById("btn-sign-out").addEventListener("click",(e)=>{
   firebase.auth().signOut().then(function() {
@@ -75,8 +67,13 @@ document.getElementById("btn-home").addEventListener("click",(e)=>{
   window.location.href = "classes.html"
 })
 
-
 document.getElementById("btn-about-us").addEventListener("click",(e)=>{
   localStorage.setItem("user_id", firebase.auth().currentUser.uid)
   window.location.href = "../about_us.html"
+})
+
+document.getElementById("create-exam").addEventListener("click",(e)=>{
+  let class_id = localStorage.getItem("chosen_class_id")
+  localStorage.setItem("class_id", class_id)
+  window.location.href ="exam.html"
 })

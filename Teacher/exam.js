@@ -1,5 +1,4 @@
-
-  // Your web app's Firebase configuration
+// Your web app's Firebase configuration
   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
   var firebaseConfig = {
     apiKey: "AIzaSyCZCatQDXAdHCU3dlz3RKGDITpgSR3DJ34",
@@ -30,8 +29,13 @@ document.addEventListener("click",(e)=>{
 
 document.addEventListener("click", (e)=>{
     if (e.target.className =="btn-remove-answer, fas fa-trash-alt"){
-        e.target.parentNode.parentNode.remove();
         e.target.parentNode.remove();
+    }
+})
+
+document.addEventListener("click", (e)=>{
+    if (e.target.className =="btn-remove-question, fas fa-trash-alt"){
+        e.target.parentNode.parentNode.remove();
     }
 })
 
@@ -44,15 +48,9 @@ document.getElementById("btn-add-question").addEventListener("click", (e)=>{
         
         <div>
             <input class ="question-input" type="text" name="question" placeholder="Question:">
-            <button class="btn-remove-answer, fas fa-trash-alt"></button>
+            <button class="btn-remove-question, fas fa-trash-alt"></button>
         </div>    
-        <div class="answer-box">
-            <div class="answer-choice">
-                <input type="checkbox">
-                <input class="answer-input" type="text" placeholder="Answer: ">
-                <button class="btn-remove-answer, fas fa-trash-alt"></button>
-            </div>
-        </div>
+
     </div>`
     content.insertAdjacentHTML("beforeend", examBoxHTML)
 })
@@ -80,4 +78,9 @@ document.getElementById("btn-home").addEventListener("click",(e)=>{
 document.getElementById("btn-about-us").addEventListener("click",(e)=>{
     localStorage.setItem("user_id", firebase.auth().currentUser.uid)
     window.location.href = "../about_us.html"
+})
+
+document.getElementById("btn-submit-exam").addEventListener("click",(e)=>{
+    alert("Submit answer succesful")
+    window.location.href = "classes.html"
 })

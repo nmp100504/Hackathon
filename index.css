@@ -5,17 +5,17 @@ body, html {
     padding: 0;
     display: flex;
     flex-flow: column;
-  }
+}
 
 *{
     font-family: 'Roboto', sans-serif;
 }
+
 .container {
     position: relative;
     text-align: center;
     color: white;
 }
-
 
 #page-body{
     /* background-image: url("https://www.gannett-cdn.com/presto/2018/12/11/POEN/1bf8529c-5855-4948-b1c9-609b51043aa6-GettyImages-950607874.jpg?crop=6143,3426,x0,y0&width=3200&height=1785&format=pjpg&auto=webp"); */
@@ -42,19 +42,6 @@ body, html {
     opacity: 0.5;
 }
 
-.formButton{
-    height: 5%;
-    width: 40%;
-    background: #00ad5f;
-    color: whitesmoke;
-    transition-property: background-color;
-    transition-duration: 0.5s;
-    opacity: 0.5;
-}
-.formButton:hover{
-    background-color: black;
-}
-
 #container{
     display: flex;
     flex-flow: row;
@@ -76,7 +63,6 @@ body, html {
     font-size: 25px;
     flex: 0 1 40px;
 }
-
 
 #teacher-page-container{
     display: flex;
@@ -185,8 +171,6 @@ body, html {
     font-size: 30px;
 }
 
-
-
 .create-exam-main{
     background-color: #f4ebc1;
     height: 100%;
@@ -197,7 +181,6 @@ body, html {
     align-items: center;
     flex-grow: 1;
 }
-
 
 .class-info , .assignment{
     background-color: white;
@@ -210,7 +193,6 @@ body, html {
     padding: 10px;
 }
 
-
 hr{
     /* border: none; */
     border: 1px black solid;
@@ -222,6 +204,8 @@ hr{
     font-size: 25px;
     font-weight: bold;
     margin-bottom: 5px;
+    display: flex;
+    align-items: center;
 }
 
 .manage-student-name, .manage-assignment-name {
@@ -241,7 +225,6 @@ hr{
     border: 2px black solid;
     padding: 10px;
 }
-
 
 .manage-student-info {
     background-color: white;
@@ -267,10 +250,12 @@ hr{
     padding-bottom: 25px;
     overflow: scroll;
 }
+
 .exam-box{
     display: flex;
     flex-flow: row;
 }
+
 .student-name{
     font-size: 25px;
     font-weight: bold;
@@ -281,7 +266,6 @@ hr{
     margin-right: 150px;
     font-size: 20px;
 }
-
 
 .number-of-students , .number, .submit{
     font-size: 20px;
@@ -300,23 +284,6 @@ hr{
     font-size: 20px;
     margin-bottom: 10px;
 }
-
-
-.navbar-home{
-    /* margin-top: 15px; */
-}
-
-.navbar-about-us{
-    /* margin-top: 15px; */
-}
-
-.btn-container{
-    margin-top: 10px;
-    display: flex;
-    flex-flow: wrap;
-}
-
-
 
 .pagination {
     display: inline-block;
@@ -339,12 +306,16 @@ hr{
   }
   
   .pagination div:hover:not(.active) {background-color: #ddd;}
-
+#score{
+    background-color: #ff3700;
+    color: white;
+    border-radius: 5px;
+    border: 1px black solid;
+}
 .checkbox-container{
     margin-left: 15px;
     margin-top: 8px;
 }
-
 
 .question{
     display: flex;
@@ -384,22 +355,43 @@ hr{
     margin-left: 50px;
 }
 
-
-.btn-add-answer{
-    margin-top: 15px;
-}
-
-.button-container{
-    margin-top: 15px;
-}
-
-
 #class-password{
     text-align: center;
     color: white;
 }
 
 #logo{
+    position: fixed;
+    left: 0;
     width: 45px;
     height: 45px;
+}
+
+/* button */
+.formButton{
+    height: 5%;
+    width: 40%;
+    background: #00ad5f;
+    color: whitesmoke;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    opacity: 0.5;
+}
+
+.formButton:hover{
+    background-color: black;
+}
+
+.button-container{
+    margin-top: 15px;
+}
+
+.btn-container{
+    margin-top: 10px;
+    display: flex;
+    flex-flow: wrap;
+}
+
+.btn-add-answer{
+    margin-top: 15px;
 }

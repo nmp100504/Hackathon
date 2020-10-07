@@ -52,7 +52,7 @@ function makeid(length) {
     });
 
     document.getElementById("class-password").innerHTML = class_id
-    alert("Create account succesful")
+    alert("Create class succesful")
 })
 
 

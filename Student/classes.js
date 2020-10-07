@@ -32,9 +32,9 @@ let data
                   let classHTML =`
                   <div class="class-info">
                     <div class="class-name">${class_name}</div>
-                    <div class="teacher">Giáo viên phụ trách: ${teacher_name}</div>
+                    <div class="teacher">Teacher: ${teacher_name}</div>
                     <div>
-                      <span class="subject">Môn: ${subject_name}</span>
+                      <span class="subject">Subject: ${subject_name}</span>
                       <span class="number-of-students">Class's ID: ${class_id}</span>
                       <button type="submit" id="enter-class" class="fas fa-door-open"  ></button>
                     </div>
@@ -47,7 +47,6 @@ let data
             for (let i = 0 ; i < data.length; i++){
               firebase.firestore().doc("classes/"+data[i]).get().then(async (doc3)=>{
                 class_data = await doc3.data()
-                console.log(class_data)
                 let subject_name = class_data.subject_name
                 let class_id = class_data.class_id
                 let class_name = class_data.class_name
@@ -55,9 +54,9 @@ let data
                 let classHTML =`
                 <div class="class-info">
                   <div class="class-name">${class_name}</div>
-                  <div class="teacher">Giáo viên phụ trách: ${teacher_name}</div>
+                  <div class="teacher">Teacher: ${teacher_name}</div>
                   <div>
-                    <span class="subject">Môn: ${subject_name}</span>
+                    <span class="subject">Subject: ${subject_name}</span>
                     <span id="class_id" class="number-of-students">Class's ID: ${class_id}</span>
                     <button type="submit" id="enter-class" class="fas fa-door-open"  ></button>
                   </div>
@@ -98,7 +97,7 @@ document.getElementById("btn-join-class").addEventListener("click", (e)=>{
     await firebase.firestore().doc("users/" + firebase.auth().currentUser.uid).update({
       classes: firebase.firestore.FieldValue.arrayUnion(class_id_join)
     })
-    console.log(class_id_join)
+    // console.log(class_id_join)
     await firebase.firestore().doc("users/"+ teacher_id).get().then(async (doc2)=>{
       data2 = await doc2.data().teacher_name
     })
@@ -108,9 +107,9 @@ document.getElementById("btn-join-class").addEventListener("click", (e)=>{
     let classHTML =`
                     <div id="class-info" class="class-info">
                       <div class="class-name">${class_name}</div>
-                      <div class="teacher">Giáo viên phụ trách: ${teacher_name}</div>
+                      <div class="teacher">Teacher: ${teacher_name}</div>
                       <div>
-                        <span class="subject">Môn: ${subject_name}</span>
+                        <span class="subject">Subject: ${subject_name}</span>
                         <span id="class_id" class="number-of-students">Class's ID: ${class_id_join}</span>
                       </div>
                     </div>

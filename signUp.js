@@ -1,6 +1,3 @@
-
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
   var firebaseConfig = {
     apiKey: "AIzaSyCZCatQDXAdHCU3dlz3RKGDITpgSR3DJ34",
     authDomain: "e-assignment-7be46.firebaseapp.com",
@@ -13,9 +10,6 @@
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
-
-
-
   
 document.getElementById("sign-up-form").addEventListener("submit", async (e)=>{
     e.preventDefault()
