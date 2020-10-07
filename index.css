@@ -65,13 +65,14 @@ body, html {
 }
 
 #navBar{
-    background-color: #726a95;
+    background-color: #e8a87c;
     color: whitesmoke;
     width: 100%;
     position: relative;
     display: flex;
     flex-flow: row;
     justify-content: space-around;
+    align-items: center;
     font-size: 25px;
     flex: 0 1 40px;
 }
@@ -86,19 +87,23 @@ body, html {
 }
 
 .footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100px;
-    background-color: #00ad5f;
+    background-color: #e8a87c;
     flex-shrink: 0 0 40px;
 }
 
 .sideBar{
     width: 15%;
     height: fit-parent;
-    background-color: #709fb0;
+    background-color: #85c1dc;
     display: flex;
     flex-flow: column;
     align-items: center;
     /* flex-grow: 1; */
+    justify-content: center;
 }
 
 .main{
@@ -298,11 +303,11 @@ hr{
 
 
 .navbar-home{
-    margin-top: 15px;
+    /* margin-top: 15px; */
 }
 
 .navbar-about-us{
-    margin-top: 15px;
+    /* margin-top: 15px; */
 }
 
 .btn-container{
@@ -394,3 +399,7 @@ hr{
     color: white;
 }
 
+#logo{
+    width: 45px;
+    height: 45px;
+}

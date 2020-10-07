@@ -40,9 +40,11 @@ document.getElementById("sign-up-form").addEventListener("submit", async (e)=>{
             teacher_name: teacher_name,
         })
         if (role == "teacher"){
+            alert("Sign-up succesful. ")
             window.location.href = "./Teacher/Classes.html"
         }
         if (role == "student"){
+            alert("Sign-up succesful. ")
             window.location.href = "./Student/Classes.html"
         }
     } 

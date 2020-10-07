@@ -52,6 +52,7 @@ function makeid(length) {
     });
 
     document.getElementById("class-password").innerHTML = class_id
+    alert("Create account succesful")
 })
 
 
@@ -59,3 +60,4 @@ function makeid(length) {
 document.getElementById("home").addEventListener("click" , (e)=>{
     window.location.href = "classes.html"
 })
+

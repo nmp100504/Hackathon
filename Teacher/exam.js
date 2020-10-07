@@ -62,3 +62,22 @@ document.getElementById("btn-submit-exam").addEventListener("click", (e)=>{
     console.log(exam_data)
 
 })
+
+document.getElementById("btn-sign-out").addEventListener("click",(e)=>{
+  firebase.auth().signOut().then(function() {
+    alert("Sign-out succesful. ")
+    window.location.href = "../index.html"
+  }).catch(function(error) {
+  });
+  
+})
+
+document.getElementById("btn-home").addEventListener("click",(e)=>{
+  window.location.href = "classes.html"
+})
+
+
+document.getElementById("btn-about-us").addEventListener("click",(e)=>{
+    localStorage.setItem("user_id", firebase.auth().currentUser.uid)
+    window.location.href = "../about_us.html"
+})

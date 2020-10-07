@@ -29,8 +29,11 @@ document.getElementById("sign-in-form").addEventListener("submit", async(e) => {
     catch(error){console.log(error.message)}
     
     const userId = await firebase.auth().currentUser.uid;
+    console.log(userId)
     await firebase.firestore().collection("users").doc(userId).get().then(async (doc)=>{
+        console.log(doc.data())
         user_data = await doc.data()
+        console.log(user_data)
         if (user_data.role =="teacher"){
             window.location.href = "./Teacher/Classes.html"
         } 
